@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: ${REGISTRY}/soil-backend:${IMAGE_TAG:-latest}
+    build: !reset null
+
+  frontend:
+    image: ${REGISTRY}/soil-frontend:${IMAGE_TAG:-latest}
+    build: !reset null
+
+  mqtt-service:
+    image: ${REGISTRY}/soil-mqtt:${IMAGE_TAG:-latest}
+    build: !reset null

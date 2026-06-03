@@ -1,0 +1,24 @@
+services:
+  postgres:
+    ports:
+      - "5435:5432"
+
+  backend:
+    ports:
+      - "8090:8000"
+    read_only: false
+
+  mqtt-service:
+    read_only: false
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    ports:
+      - "8081:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    depends_on:
+      - postgres
+    networks:
+      - internal

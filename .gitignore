@@ -1,0 +1,15 @@
+# env — contains passwords, never commit
+.env
+
+# node
+frontend/node_modules/
+frontend/dist/
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# docker
+*.log

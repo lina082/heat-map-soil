@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  * { box-sizing: border-box; }
+
+  /* dark mode (default) */
+  body {
+    background-color: #111111;
+    color: #e5e5e5;
+    color-scheme: dark;
+  }
+
+  /* light mode overrides — remap surface/ink tokens via CSS */
+  html:not(.dark) body {
+    background-color: #f5f5f5;
+    color: #171717;
+    color-scheme: light;
+  }
+
+  html:not(.dark) .bg-surface         { background-color: #f5f5f5 !important; }
+  html:not(.dark) .bg-surface-raised  { background-color: #ffffff !important; }
+  html:not(.dark) .bg-surface-overlay { background-color: #f0f0f0 !important; }
+  html:not(.dark) .bg-surface-subtle  { background-color: #e5e5e5 !important; }
+
+  html:not(.dark) .border-surface-border { border-color: #d4d4d4 !important; }
+  html:not(.dark) .border-surface-subtle { border-color: #e5e5e5 !important; }
+  html:not(.dark) .divide-surface-border > * + * { border-color: #d4d4d4 !important; }
+
+  html:not(.dark) .text-ink        { color: #171717 !important; }
+  html:not(.dark) .text-ink-muted  { color: #525252 !important; }
+  html:not(.dark) .text-ink-faint  { color: #a3a3a3 !important; }
+}
