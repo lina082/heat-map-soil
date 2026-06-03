@@ -34,8 +34,8 @@ export function App() {
       <header className="bg-surface-raised border-b border-surface-border sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-12">
           <div className="flex items-center gap-3">
-            <div className="w-2 h-2 bg-brand rounded-sm" />
-            <span className="text-sm font-semibold text-ink tracking-widest uppercase">
+            <div className="w-2 h-2 bg-brand" />
+            <span className="font-display text-base font-700 text-ink tracking-tight">
               Monitor de Suelo
             </span>
           </div>
@@ -45,7 +45,7 @@ export function App() {
                 <button
                   key={id}
                   onClick={() => setPage(id)}
-                  className={`px-5 h-12 text-xs font-semibold tracking-widest transition-colors border-b-2 ${
+                  className={`px-5 h-12 text-sm font-semibold transition-colors border-b-2 ${
                     page === id
                       ? "text-brand border-brand"
                       : "text-ink-faint border-transparent hover:text-ink-muted"
